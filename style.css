@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@keyframes slidetop {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+@keyframes slidenav {
+    from {
+        transform: translateY(-300px);
+    }
+    to {
+        transform: translateY(0);
+    }
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+}
+
+video {
+    position: absolute;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.form-box {
+    position: absolute;
+    width: 400px;
+    height: 550px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slidetop 1.5s ease-out normal ;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
+
+.inputbox {
+    position: relative;
+    margin: 30px 0;
+    width: 350px;
+    border-bottom: 2px solid white;
+
+}
+
+.inputbox label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-35%);
+    color: white;
+    font-size: 1em;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+input:focus~label,
+input:valid~label {
+    top: -5px;
+}
+
+.inputbox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: white;
+    padding: 0 35px 0 5px;
+}
+
+.inputbox ion-icon {
+    position: absolute;
+    right: 8px;
+    color: white;
+    font-size: 20px;
+    top: 20px;
+}
+
+.forget {
+    margin: -15px 0 15px;
+    font-size: 0.9em;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.forget label input {
+    margin-right: 3px;
+
+}
+
+.forget a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    background-color: #fff;
+    transition: 0.4s;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+button:hover {
+    transform: scale(0.93);
+}
+
+.register {
+    text-align: center;
+    color: white;
+    margin-top: 5px;
+}
+
+.register a {
+    color: white;
+    text-decoration: none;
+
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.menubar {
+    width: 100%;
+    height: 12%;
+    background-color: rgba(17, 17, 17, 0.75);
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.35);
+    position: absolute;
+    top: 0;
+    text-align: right;
+    animation: slidenav 1.7s linear;
+}
+
+.menubar ul {
+    display: inline-flex;
+    list-style: none;
+
+}
+
+.menubar ul li {
+    padding: 25px;
+    margin: 15px 15px 0 0;
+    font-size: 17px;
+    
+}
+
+.menubar a {
+    text-decoration: none;
+    position: relative;
+    color: white;
+    display: inline-block;
+}
+
+.menubar a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: white;
+    transition: 0.5s;
+    border-radius: 60px;
+    display: block;
+    margin: auto;
+}
+
+.menubar a:hover::after {
+    width: 100%;
+
+}
+
+.menubar a:hover {
+    text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
+    color: #fff;
+}
+
+#foto {
+    position: absolute;
+    top: 22px;
+    left: 100px;
+    cursor: pointer;
+    width: 0;
+}
+
+.loginoption {
+    text-align: center;
+    margin: px 0;
+    z-index: 0;
+    position: relative;
+    top: 50px;
+}
+
+.loginoption p {
+    color: white;
+    font-size: 13px;
+    position: relative;
+
+}
+
+.loginoption p::before {
+    content: ' ';
+    position: absolute;
+    top: 49%;
+    left: 0;
+    width: 28%;
+    height: 2px;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.loginoption p::after {
+    content: ' ';
+    position: absolute;
+    top: 49%;
+    right: 0;
+    width: 28%;
+    height: 2px;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.icons {
+    width: 100%;
+    text-align: center;
+    height: 60px;
+    position: relative;
+    top: 60px;
+    left: 12px;
+}
+
+.icons a img {
+    width: 45px;
+    margin: 0 25px 0 0;
+    transition: 0.2s;
+}
+
+.icons a img:hover{
+    transform: scale(1.3);
+}
